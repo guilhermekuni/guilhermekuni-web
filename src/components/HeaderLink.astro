@@ -8,16 +8,9 @@ const isActive = href === Astro.url.pathname.replace(/\/$/, '');
 </a>
 <style>
   a {
-    display: inline-flex;
-    text-decoration: none;
-    align-items: center;
-    gap: 4px;
-    margin-left: 2rem;
-    font-size: 1.25rem;
+    @apply hover:underline inline-flex gap-4 text-xl ml-8;
   }
   a.active {
-    font-weight: bolder;
-    color: aliceblue;
-    text-decoration: underline;
+    @apply text-yellow-500 underline-offset-1;
   }
 </style>

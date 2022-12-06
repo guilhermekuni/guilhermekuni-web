@@ -1,7 +1,26 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import SectionTitle from '@components/SectionTitle.astro';
+import SectionParagraph from '@components/SectionParagraph.astro';
 ---
 
 <Layout title="Guilherme Kuniyoshi - About">
-  <p>about</p>
+  <SectionTitle>Work</SectionTitle>
+  <div class="mt-4">
+    <SectionParagraph>I'm a Frontend Engineer based on São Paulo, Brazil.</SectionParagraph>
+    <SectionParagraph>
+      I have more than 6 years of experience with Software Engineering, working with multiple
+      technologies from Backend to Frontend.
+    </SectionParagraph>
+    <SectionParagraph
+      >Currently, I'm working for a international company called Ambush and my stack is focused, but
+      not limited, to React, React Native and JavaScript.
+    </SectionParagraph>
+  </div>
+
+  <SectionTitle>Hobbies & Fun facts</SectionTitle>
+  <div class="mt-4">
+    <SectionParagraph>I have 11 cats and 2 dogs.</SectionParagraph>
+    <SectionParagraph>I'm very addicted to One Piece and other Shonen Anime.</SectionParagraph>
+  </div>
 </Layout>
