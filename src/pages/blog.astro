@@ -1,17 +1,21 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import PostCard from '@components/PostCard.astro';
 
 const allPosts = await Astro.glob('../pages/blog/*.md');
 ---
 
 <Layout title="Guilherme Kuniyoshi - Blog">
-  <h2 class="text-2xl mt-2">I talk about JavaScript, React, and Frontend in general.</h2>
-  <div class="mt-4">
+  <h2 class="text-2xl mt-2 mx-4">I talk about JavaScript, React, and Frontend in general.</h2>
+  <div class="mt-4 grid sm:grid-cols-2 gap-8 xs:grid-cols-1">
     {
       allPosts.map((post) => (
-        <li>
-          <a href={post.url}>{post.frontmatter.title}</a>
-        </li>
+        <PostCard
+          postUrl={post.url}
+          imageUrl={post.frontmatter.image.url}
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+        />
       ))
     }
   </div>

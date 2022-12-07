@@ -1,0 +1,20 @@
+---
+export interface Props {
+  postUrl?: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+const { postUrl, title, description, imageUrl } = Astro.props;
+---
+
+<a href={postUrl}>
+  <div
+    class="w-100 p-4 rounded-lg bg-transparent hover:bg-cyan-100 transition duration-200 delay-200 ease"
+  >
+    <img src={imageUrl} alt={title} class="rounded-md" />
+    <h1 class="font-bold text-lg mt-2 text-center">{title}</h1>
+    <h2 class="text-sm text-center">{description}</h2>
+  </div>
+</a>
