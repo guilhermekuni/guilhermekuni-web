@@ -1,7 +1,16 @@
 ---
 import Layout from '@layouts/Layout.astro';
+
+const allPosts = await Astro.glob('../pages/blog/*.md');
 ---
 
 <Layout title="Guilherme Kuniyoshi - Blog">
   <h2 class="text-2xl mt-2">I talk about JavaScript, React and Frontend in general.</h2>
+  {
+    allPosts.map((post) => (
+      <li>
+        <a href={post.url}>{post.frontmatter.title}</a>
+      </li>
+    ))
+  }
 </Layout>
