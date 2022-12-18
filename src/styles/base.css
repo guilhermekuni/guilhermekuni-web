@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  body {
+    @apply font-mono flex flex-col selection:bg-amber-500;
+  }
+  p {
+    @apply leading-relaxed
+  }
+  pre {
+    @apply p-4 mt-2 mb-10 rounded-md
+  }
+  pre>code {
+    @apply bg-transparent font-normal;
+  }
+  code {
+    @apply bg-amber-100 text-black rounded-md font-bold p-1;
+  }
+}
